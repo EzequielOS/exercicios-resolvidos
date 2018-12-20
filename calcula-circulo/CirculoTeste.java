@@ -13,14 +13,22 @@ public class CirculoTeste {
 
         Circulo c1 = new Circulo(5.0, "Amarelo");
         Circulo c2 = new Circulo(1.2);
+        Circulo c3 = new Circulo(3.8, "Azul");
+        c3.setRaio(3.6);
+        c1.setCor("Verde");
 
         System.out.println("Figura1 (F1): \n" + c1.toString());
         System.out.println("Area F1: "+ dc.format(c1.getArea()));
-        System.out.println("Circunfere F1: "+ dc.format(c1.getCircunferencia()));
-        System.out.println();
-        System.out.println("Figura2 (F2): \n" + c2.toString());
-        System.out.println("Area F2: "+ dc.format(c2.getArea()));
-        System.out.println("Circunfere F2: "+ dc.format(c2.getCircunferencia()));
+        System.out.println("Circunferencia F1: "+ dc.format(c1.getCircunferencia()));
 
+        System.out.println();
+        System.out.println("Figura2 (F2): \n" + "Raio: " + c2.getRaio() + " Cor: " + c2.getCor());
+        System.out.println("Area F2: "+ dc.format(c2.getArea()));
+        System.out.println("Circunferencia F2: "+ dc.format(c2.getCircunferencia()));
+
+        System.out.println();
+        System.out.println("Figura2 (F2): \n" + c3.toString());
+        System.out.println("Area F2: "+ dc.format(c3.getArea()));
+        System.out.println("Circunferencia F2: "+ dc.format(c3.getCircunferencia()));
     }
 }

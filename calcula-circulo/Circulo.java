@@ -7,43 +7,43 @@ Informações adicionais: https://docs.google.com/document/d/1Uq6IUqO100w2ylIxVi
 */
 
 public class Circulo {
-    double raio = 1.0;
-    String cor = "vermelho";
+    private double raio = 1.0;
+    private String cor = "vermelho";
 
-    Circulo(){
+    public Circulo(){
     }
 
-    Circulo(double raio){
+    public Circulo(double raio){
         this.raio = raio;
     }
-    Circulo(double raio, String cor){
+    public Circulo(double raio, String cor){
         this.cor = cor;
         this.raio = raio;
     }
 
-    public void setRaio(){
+    public void setRaio(double raio){
         this.raio = raio;
     }
-    public void setCor(){
+    public void setCor(String cor){
         this.cor = cor;
     }
     public double getRaio(){
-        return raio;
+        return this.raio;
     }
     public String getCor(){
-        return cor;
+        return this.cor;
     }
 
-    double getArea(){
+    public double getArea(){
         double area = Math.PI * Math.pow(raio,2);
         return area;
     }
-    double getCircunferencia(){
+    public double getCircunferencia(){
         double circuferencia = (2 * Math.PI) * raio;
         return circuferencia;
     }
 
     public String toString(){
-        return "Circulo [raio="+ raio +", cor="+ cor +"]";
+        return "Circulo [raio="+ this.raio +", cor="+ this.cor +"]";
     }
 }

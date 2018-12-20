@@ -7,16 +7,16 @@ Informações adicionais: https://docs.google.com/document/d/1Uq6IUqO100w2ylIxVi
 */
 
 public class Empregado {
-    int id;
-    String primeiroNome;
-    String segundoNome;
-    double salario;
+    private int id;
+    private String primeiroNome;
+    private String segundoNome;
+    private double salario;
 
-    Empregado(){
+    public Empregado(){
 
     }
 
-    Empregado(int id, String primeiroNome, String segundoNome, double salario){
+    public Empregado(int id, String primeiroNome, String segundoNome, double salario){
         this.id = id;
         this.primeiroNome = primeiroNome;
         this.segundoNome = segundoNome;
@@ -24,36 +24,39 @@ public class Empregado {
     }
 
     public int getId(){
-        return id;
+        return this.id;
+    }
+    public void setId(int id){
+        this.id = id;
     }
     public String getPrimeiroNome(){
-        return primeiroNome;
+        return this.primeiroNome;
     }
     public void setPrimeiroNome(String primeiroNome){
         this.primeiroNome = primeiroNome;
     }
     public String getSegundoNome(){
-        return segundoNome;
+        return this.segundoNome;
     }
     public void setSegundoNome(String segundoNome){
         this.segundoNome = segundoNome;
     }
     public String getNomeCompleto(){
-        return primeiroNome+" "+segundoNome;
+        return this.primeiroNome + " " + this.segundoNome;
     }
     public double getSalario(){
-        return salario;
+        return this.salario;
     }
     public void setSalario(double salario){
         this.salario = salario;
     }
     public double getSalarioAnual(){
-        return salario*12;
+        return this.salario * 12;
     }
     public void setAumentoSalario(double porcentagem){
         salario += (porcentagem / 100) * salario;
     }
     public String toString(){
-        return "ID = "+ id;
+        return this.primeiroNome + " ID = "+ this.id;
     }
 }
