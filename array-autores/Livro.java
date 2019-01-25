@@ -5,7 +5,7 @@ import java.util.Arrays;
 Data de criacao do  arquivo: 24/01/2019
 Objetivo sucinto do arquivo: Programa cria uma classe Livro para composicao em TestaAutorLivro
 Referencia: URI Online Judge
-Informacoes adicionais: 
+Informacoes adicionais:
 
  */
 
@@ -15,7 +15,7 @@ public class Livro {
 	private Autor[] autores;
 	private double preco;
 	private int qtdadeLivros;
-	
+
 	public Livro(String titulo, Autor[] autor, double preco){
 		this.titulo = titulo;
 		this.autores = autor;
@@ -45,12 +45,16 @@ public class Livro {
 	public void setQtdadeLivros(int qtdadeLivros) {
 		this.qtdadeLivros = qtdadeLivros;
 	}
-	
+
 	public String toString() {
-		return "Livro [ Titulo = " + getTitulo() +", Autores = " + getNomesDeAutores() + ", Preco = " + getPreco() + ", Quantidade = " + getQtdadeLivros();
+		return "Livro [ Titulo = " + getTitulo() +", \nAutores = \n" + Arrays.toString(autores) + ", \nPreco = " + getPreco() + ", \nQuantidade = " + getQtdadeLivros();
 	}
 	public String getNomesDeAutores() {
-		return Arrays.toString(autores);
-		
+		String a = "";
+		for (int i = 0; i < autores.length; i++) {
+			a += autores[i].getNome() + ". \n";
+		}
+		return a;
+
 	}
 }

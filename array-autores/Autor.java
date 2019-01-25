@@ -3,7 +3,7 @@
 Data de criacao do  arquivo: 24/01/2019
 Objetivo sucinto do arquivo: Programa cria uma classe Autor para composicao em TestaAutorLivro
 Referencia: URI Online Judge
-Informacoes adicionais: 
+Informacoes adicionais:
 
  */
 
@@ -39,7 +39,7 @@ public class Autor {
 	}
 
 	public String toString() {
-		return "Autor [Nome = " + getNome() + ", Email = " + getEmail() + ", Genero = " + getGenero() + "]";
+		return "Autor [Nome = " + getNome() + ", \nEmail = " + getEmail() + ", \nGenero = " + getGenero() + "]\n";
 	}
 
 }
