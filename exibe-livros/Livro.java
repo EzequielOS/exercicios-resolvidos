@@ -45,7 +45,7 @@ public class Livro {
 	}
 	
 	public String toString() {
-		return "Livro [ Titulo = " + getTitulo() +", Autor = " + autor.toString() + ", Preco = " + getPreco() + ", Quantidade = " + getQtdadeLivros();
+		return "Livro [ Titulo = " + getTitulo() +", \nAutor = " + autor.toString() + ", \nPreco = " + getPreco() + ", \nQuantidade = " + getQtdadeLivros();
 	}
 	
 }
